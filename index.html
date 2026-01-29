@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+<meta charset="utf-8">
+<title>Canvas Move</title>
+<canvas id=c width=900 height=320 style="background:#0a7b0a;display:block;margin:30px auto"></canvas>
+<script>
+    const c = document.getElementById('c'), x = c.getContext('2d'); let p = 12;
+    (function a() {
+        x.clearRect(0, 0, 900, 320); x.beginPath(); x.arc(p, 160, 10, 0, 7); x.fillStyle = "#fff"; x.fill();
+        p = p > 910 ? -10 : p + 10; requestAnimationFrame(a);
+    })();
+</script>
+
+</html>
